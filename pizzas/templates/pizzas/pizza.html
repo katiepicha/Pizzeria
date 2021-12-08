@@ -4,6 +4,7 @@
 
 <p>Pizza: {{ pizza }}</p>
 
+<p>Toppings:</p>
 <ul>
     {% for t in toppings %}
 
@@ -15,5 +16,21 @@
     <li>There are no toppings for this pizza.</li>
     {% endfor %}
 </ul>
+
+<p>Comments:</p>
+<ul>
+    {% for c in comments %}
+
+    <li>
+        <p>{{ c.comment|linebreaks }}</p>
+    </li>
+
+    {% empty %}
+    <li>There are no comments for this pizza.</li>
+    {% endfor %}
+</ul>
+<p>
+    <a href="{% url 'pizzas:new_comment' pizza_id %}">Add a new comment</a>
+</p>
 
 {% endblock content %}

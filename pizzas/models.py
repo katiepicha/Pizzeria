@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 
 # Create your models here.
 class Pizza(models.Model):
@@ -16,3 +17,14 @@ class Topping(models.Model):
 
     def __str__(self):
         return self.name
+
+class Comment(models.Model):
+    pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
+    comment = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'comments'
+
+    def __str__(self):
+        return self.comment
