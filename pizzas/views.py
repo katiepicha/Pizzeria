@@ -10,6 +10,6 @@ def index(request):
 def pizzas(request):
     pizzas = Pizza.objects.order_by('name')
 
-    context = {'pizzas': pizzas}
+    context = {'pizzas':pizzas}
 
     return render(request, 'pizzas/pizzas.html', context)
