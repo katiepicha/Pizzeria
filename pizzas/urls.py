@@ -11,5 +11,6 @@ app_name = 'pizzas'
 # the variable urlpatterns in this module is a list of individual pages that can be requested from the pizzas app
 urlpatterns = [
     path('', views.index, name = 'index'),
+    path('pizzas', views.pizzas, name='Pizzas'),
 ]
 
