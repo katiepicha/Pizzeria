@@ -30,7 +30,7 @@
     {% endfor %}
 </ul>
 <p>
-    <a href="{% url 'pizzas:new_comment' pizza_id %}">Add a new comment</a>
+    <a href="{% url 'pizzas:new_comment' pizza.id %}">Add a new comment</a>
 </p>
 
 {% endblock content %}
