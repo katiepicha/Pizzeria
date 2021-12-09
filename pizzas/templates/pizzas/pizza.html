@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<p>Pizza: {{ pizza }}</p>
+<h3><p>Pizza: {{ pizza }}</p></h3>
 {% if pizza.name == 'Hawaiian' %}
 <img src="https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1024x1536.jpg" width='200' height='200'>
 {% elif pizza.name == 'Meat Lovers' %}
@@ -15,7 +15,7 @@
 <img src="https://www.insidetherustickitchen.com/wp-content/uploads/2020/07/Quattro-Formaggi-1200px-Inside-the-Rustic-Kitchen-2.jpg" width='200' height='230'>
 {% endif %}
 
-<p>Toppings:</p>
+<h4><p>Toppings:</p></h4>
 <ul>
     {% for t in toppings %}
 
@@ -28,7 +28,7 @@
     {% endfor %}
 </ul>
 
-<p>Comments:</p>
+<h4><p>Comments:</p></h4>
 <ul>
     {% for c in comments %}
 

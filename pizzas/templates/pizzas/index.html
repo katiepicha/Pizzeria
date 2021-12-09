@@ -1,8 +1,14 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
-    <p>
-    Pizzeria shows you available pizzas, shows you the toppings on each pizza, and allows users to post comments
-    about particular pizzas.
-    </p>
-{% endblock content %}
+{% block page_header %}
+
+<img src="https://www.thinktankprm.com/wp-content/uploads/2019/11/katies_pizza_pasta_logo_new.png" width='600' height='300'>
+<div class="jumbotron">
+    <h1 class="display-3">Think Pizza, Think Katie's</h1>
+    <p class="lead">Pizzeria shows you a list of our available pizzas, lists the toppings on each pizza, and allows visitors
+        to post comments about any particular pizza.</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'pizzas:pizzas' %}" role="button">View Our Menu &raquo;</a>
+</div>
+<img src="https://www.945bayfm.com/wp-content/uploads/2020/02/pizzas-640x400.jpg" width='900' height='500'>
+
+{% endblock page_header %}
