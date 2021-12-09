@@ -18,8 +18,9 @@ def pizzas(request):
 def pizza(request, pizza_id):
     pizza = Pizza.objects.get(id=pizza_id)
     toppings = pizza.topping_set.all() # foreign key is accessed using '_set'
+    comments = pizza.comment_set.all()
 
-    context = {'pizza':pizza, 'toppings':toppings}
+    context = {'pizza':pizza, 'toppings':toppings, 'comments':comments}
 
     return render(request, 'pizzas/pizza.html', context)
 
@@ -37,7 +38,6 @@ def new_comment(request, pizza_id):
             new_comment = form.save(commit=False)
             new_comment.pizza = pizza
             new_comment.save()
-            form.save()
             return redirect('pizzas:pizza', pizza_id=pizza_id)
 
     context = {'form':form, 'pizza':pizza}

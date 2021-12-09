@@ -33,7 +33,7 @@
     {% for c in comments %}
 
     <li>
-        <p>{{ c.comment|linebreaks }}</p>
+        <p>{{ c.text|linebreaks }}</p>
     </li>
 
     {% empty %}
