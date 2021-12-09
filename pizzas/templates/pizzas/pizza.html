@@ -3,6 +3,17 @@
 {% block content %}
 
 <p>Pizza: {{ pizza }}</p>
+{% if pizza.name == 'Hawaiian' %}
+<img src="https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1024x1536.jpg" width='200' height='200'>
+{% elif pizza.name == 'Meat Lovers' %}
+<img src="https://myfoodbook.com.au/sites/default/files/styles/sr_wd/public/recipe_photo/Whisk_PI_190919_Pizzas_006_MEAT_LOVERS.jpg" width='260' height='170'>
+{% elif pizza.name == 'Margherita' %}
+<img src="https://images.crateandbarrel.com/is/image/Crate/frame-margherita-pizza-1" width='250' height='200'>
+{% elif pizza.name == 'Supreme' %}
+<img src="https://cdn-bpndg.nitrocdn.com/CpZMPKwGohqOxAgaGybHUejVGcoVYwvh/assets/static/optimized/rev-a8eefc3/wp-content/uploads/2021/09/tasty-supreme-pizza-with-olives-peppers-onions-and-sausage-1.jpg" width='200' height='230'>
+{% elif pizza.name == 'Four Cheese' %}
+<img src="https://www.insidetherustickitchen.com/wp-content/uploads/2020/07/Quattro-Formaggi-1200px-Inside-the-Rustic-Kitchen-2.jpg" width='200' height='230'>
+{% endif %}
 
 <p>Toppings:</p>
 <ul>
